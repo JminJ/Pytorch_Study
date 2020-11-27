@@ -48,3 +48,15 @@ optimizer.step() # update parameters
 pred = linear(x) 
 loss = criterion(pred, y)
 print('loss after 1 step optimization : ', loss.item())
+
+# 3. Loading data from numpy
+
+x = np.array([[1,2], [3,4]])
+
+# make numpy array to torch Tensor
+y = torch.from_numpy(x)
+print(y.type())
+
+# make torch Tensor to numpy array
+z = y.numpy()
+print(type(z))
